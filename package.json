@@ -1,0 +1,26 @@
+{
+  "name": "eslint-plugin-lodash-to-native",
+  "version": "0.0.6",
+  "description": "lodash-to-native map",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "author": "D.A.Timofeev",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha tests --recursive"
+  },
+  "dependencies": {
+    "requireindex": "~1.2.0"
+  },
+  "devDependencies": {
+    "eslint": "~6.4.0",
+    "mocha": "^6.2.0"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "license": "ISC"
+}
