@@ -40,6 +40,23 @@ ruleTester.run("lodash-to-native/map", rule, {
             errors: [{
                 messageId: 'prefer'
             }]
+        },
+        {
+            code: `/* global _ */
+const arr1 = [1, 2, 3];
+_.map(arr1, n => {
+    return n + 1;
+});`,
+            output: `/* global _ */
+const arr1 = [1, 2, 3];
+_.isArray(arr1) ? arr1.map(n => {
+    return n + 1;
+}) : _.map(arr1, n => {
+    return n + 1;
+});`,
+            errors: [{
+                messageId: 'prefer'
+            }]
         }
     ],
 });
